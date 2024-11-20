@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kora Thomson Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f8fc;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #1a4b7c, #17a589);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 0;
+        }
+        header h2 {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(90deg, #1a4b7c, #17a589);
+        }
+        nav button {
+            background: transparent;
+            color: white;
+            font-size: 1em;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.3s;
+        }
+        nav button:hover, nav button.active {
+            background-color: #78d3c2;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        main img {
+            display: block;
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+            border-radius: 50%;
+            border: 4px solid #78d3c2;
+        }
+        footer {
+            text-align: center;
+            background: linear-gradient(90deg, #1a4b7c, #17a589);
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+        footer img {
+            max-width: 100%;
+            margin: 20px 0;
+        }
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .contact-icons a {
+            color: white;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function openPage(pageId) {
+            const sections = document.querySelectorAll("section");
+            const buttons = document.querySelectorAll("nav button");
+            sections.forEach(section => section.style.display = "none");
+            buttons.forEach(button => button.classList.remove("active"));
+            document.getElementById(pageId).style.display = "block";
+            document.getElementById(pageId + "-btn").classList.add("active");
+        }
+    </script>
+</head>
+<body onload="openPage('home')">
+    <header>
+        <h1>Welcome</h1>
+        <h2>Kora Thomson Portfolio</h2>
+    </header>
+    <nav>
+        <button id="home-btn" onclick="openPage('home')">Home</button>
+        <button id="experience-btn" onclick="openPage('experience')">Experience</button>
+        <button id="projects-btn" onclick="openPage('projects')">Projects</button>
+    </nav>
+    <main>
+        <section id="home">
+            <img src="PROFILEPHOTO.png" alt="Kora Thomson">
+            <h2>About Me</h2>
+            <p>I bring a blend of technical expertise and practical skills that have been well practiced in a range of environments with focus on operational efficiencies. Alongside this I'm familiar with web development, digital marketing and programming. My hands-on engineering background, combined with project coordination, cross-departmental communication, and problem-solving abilities, make me well-suited for digital and technology roles. I thrive in fast-paced environments, excel at creative troubleshooting, and am committed to continuous learning and innovative solutions.</p>
+        </section>
+        <section id="experience" style="display: none;">
+            <h2>Experience</h2>
+            <p><strong>Multi-disciplinary Engineer - Gkn Aerospace</strong><br>
+                Expertise in Systems Diagnosis and Repair: Proficient in diagnosing and repairing complex electrical and mechanical systems, including PLCs and CNC machinery.<br>
+                Programming Skills: Experienced in various software applications related to engineering processes.<br>
+                Comprehensive Fault-Finding: Successfully performed fault-finding, machine alignments, and calibrations to enhance operational efficiency, also conducting test cycles to optimise performance.<br>
+                Maintenance Responsiveness: Effectively responded to scheduled and reactive maintenance needs, ensuring reliability of equipment in aerospace production facilities.<br>
+                Fabrication and Welding Experience: Competent in general fabrication, welding, rigging, and slinging.<br>
+                Commitment to Safety and Compliance: Maintained strict adherence to safety protocols and Export Control regulations.<br>
+                Data Management: Utilized electronic data collection (CONCEPT) to maintain accurate job records.<br>
+                Quality Assurance Support: during a placement I assisted quality inspectors with audits and data record completion, enhancing overall quality control processes.
+            </p>
+            <p><strong>Event Production and Digital Marketing Assistant - Sunrise Celebration Festivals</strong><br>
+                Led email marketing campaigns targeting key audiences to enhance festival engagement.<br>
+                Managed administrative tasks and maintained data accuracy using Excel.<br>
+                Supported procurement efforts and acted as a liaison between Site Manager and staff.<br>
+                Coordinated recruitment processes to ensure adequate staffing for events.<br>
+                Addressed and resolved issues promptly to ensure smooth event operations.
+            </p>
+            <p><strong>Supply Chain Administrator - Greencore PLC</strong><br>
+                Digital Records Management: Created and maintained digital records and invoices for accurate system documentation and keep reports on goods in processes.<br>
+                Cross-Departmental Communication: Acted as a liaison between internal departments and external suppliers to streamline operations.<br>
+                Coordinated Supplier Deliveries: Ensured timely shipments aligned with production requirements, and proactively identified and resolved issues within the supply chain.<br>
+                Operational Efficiency: Enhanced efficiency by building a harmonious flow of goods and data.
+            </p>
+            <p>Basic knowledge of HTML coding for small webpages and basic troubleshooting, web development, digital marketing, and SEO practices.</p>
+        </section>
+        <section id="projects" style="display: none;">
+            <h2>Projects</h2>
+            <p>Details about projects go here.</p>
+        </section>
+    </main>
+    <footer>
+        <img src="newbanner.png" alt="Banner">
+        <div class="contact-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:someone@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
